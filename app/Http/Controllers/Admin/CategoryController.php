@@ -48,7 +48,7 @@ class CategoryController extends Controller
         $categories = Category::get();        
         $currentCategory = Category::where('id' , $categoryId)->get()-first();
         $edit = true;
-        return view('admin\category\create' compact('categories' , 'edit' , 'currentCateggory'));
+        return view('admin\category\create'  compact('categories' , 'edit' , 'currentCateggory'));
     }
 
     // Edit Save Category
