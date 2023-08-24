@@ -16,10 +16,10 @@ class CategoryController extends Controller
     // Render Create Form
     public function createCategory()
     {
-        $category = Category::get();        
+        $categories = Category::get();        
         $edit = false;
         $actionUrl = route('admin.category.create.save');
-        return view('admin\category\create' , compact('category' , 'edit' ,  'actionUrl'));
+        return view('admin\category\create' , compact('categories' , 'edit' ,  'actionUrl'));
     }
 
     // save category
