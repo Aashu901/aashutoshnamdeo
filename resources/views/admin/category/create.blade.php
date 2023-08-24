@@ -15,7 +15,7 @@
 
                         <div class="form-group row m-2">
                             <div class="col-sm-9">
-                                <select class="form-select" aria-label="Default select example" id="parent_category">
+                                <select class="form-select" name="parent_category" aria-label="Default select example" id="parent_category">
                                     <option value="">No Parent</option>
                                     @foreach($categories as $category)
                                     <option value="{{ $category->id }}" {{ $edit ? $currentCategory->parent_id == $category->id ? 'selected' : ''  :''   }}>{{$category->category_name}}</option>

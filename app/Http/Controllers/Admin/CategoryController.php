@@ -37,7 +37,7 @@ class CategoryController extends Controller
 
         $caretory->save();
 
-        return redirect()->back()->with('message', 'Category Saved');     
+        return redirect()->route('admin.dashboard')->with('message', 'Category Saved');     
 
 
     }
@@ -70,7 +70,7 @@ class CategoryController extends Controller
 
         $caretoryForUpdate->update($dataForUpdate);
 
-        return redirect()->back()->with('message', 'Category Updated');   
+        return redirect()->route('admin.dashboard')->with('message', 'Category Updated');   
     }
 
     // Delete Category
