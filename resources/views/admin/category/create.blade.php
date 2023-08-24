@@ -11,7 +11,7 @@
                     <form method="post" action="{{$actionUrl}}" enctype="multipart/form-data">
                         @csrf
 
-                        <div class="form-group">
+                        <div class="form-group row">
                             <label for="parent_category">Select Parent Category</label>
                             <div class="col-sm-9">
                             <select class="form-control" id="parent_category">
