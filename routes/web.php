@@ -21,8 +21,17 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\DashboardController::class, 'userDashboard'])->name('home');
 
+
+// Admin Routes
 Route::group(['middleware' => ['auth', 'is_admin'] , 'prefix' => 'admin'], function() {
+    // Admin Dashboard
     Route::get('dashboard', [App\Http\Controllers\DashboardController::class, 'adminDashboard'])->name('admin.dashboard');
+
+    // Category creat
     Route::get('cerate-category', [App\Http\Controllers\Admin\CategoryController::class, 'createCategory'])->name('admin.category.create');
     Route::post('cerate-category', [App\Http\Controllers\Admin\CategoryController::class, 'createCategorySave'])->name('admin.category.create.save');
+
+    // Category Edit
+    Route::get('edit/cerate-category/{$categoryId}', [App\Http\Controllers\Admin\CategoryController::class, 'editCategory'])->name('admin.category.edit');
+    Route::post('edit/cerate-category', [App\Http\Controllers\Admin\CategoryController::class, 'editCategorySave'])->name('admin.category.edit.save');
 });
