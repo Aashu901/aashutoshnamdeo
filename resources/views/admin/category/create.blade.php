@@ -13,12 +13,14 @@
 
                         <div class="form-group">
                             <label for="parent_category">Select Parent Category</label>
+                            <div class="col-sm-9">
                             <select class="form-control" id="parent_category">
                                 <option value="">No Parent</option>
                                 @foreach($categories as $category)
                                     <option value="{{ $category->id }}" @if($edit) @if($currentCategory->parent_id == $category->id) 'selected' @endif @endif >{{$category->category_name}}</option>
                                 @endforeach
                             </select>
+                            <div class="col-sm-9">
                         </div>
                         @if($edit)
                             <input type="hidden" value="{{$currentCategory->id}}" name="category_id">
