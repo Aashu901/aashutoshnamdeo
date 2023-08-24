@@ -18,7 +18,7 @@ class CategoryController extends Controller
     {
         $category = Category::get();        
         $edit = false;
-        return view('admin\category\create' compact('category' , 'edit'));
+        return view('admin\category\create' , compact('category' , 'edit'));
     }
 
     // save category
