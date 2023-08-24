@@ -1,5 +1,10 @@
 I choose Task 1 for Admin and User authentication and category management
 
+before start please run these commands : -
+    composer update self
+    nmp install
+    npm run dev
+
 
 Category Managemnt and User Admin Authentication
 
