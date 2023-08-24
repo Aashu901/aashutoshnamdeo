@@ -8,7 +8,7 @@
             <div class="card">
                 <div class="card-header">Create Category</div>
                 <div class="card-body justify-content-center">
-                    <form method="post" action="{{ @if($edit) route('admin.category.create.edit) @else route('admin.category.create.save) @endif )}}" enctype="multipart/form-data">
+                    <form method="post" action="{{$actionUrl}}" enctype="multipart/form-data">
                         @csrf
 
                         <div class="form-group">

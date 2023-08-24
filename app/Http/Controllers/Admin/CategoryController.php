@@ -18,7 +18,8 @@ class CategoryController extends Controller
     {
         $category = Category::get();        
         $edit = false;
-        return view('admin\category\create' , compact('category' , 'edit'));
+        $actionUrl = route('admin.category.create.save');
+        return view('admin\category\create' , compact('category' , 'edit' ,  'actionUrl'));
     }
 
     // save category
