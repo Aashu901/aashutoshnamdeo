@@ -66,7 +66,7 @@
                         @if(Auth::user()->is_admin == '1')
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link" href="#">Create Category</a>
+                            <a class="nav-link" href="{{route('admin.category.create')}}">Create Category</a>
                         </li>
 
                         @endif
