@@ -47,9 +47,11 @@ class CategoryController extends Controller
     public function editCategory($categoryId)
     {
         $categories = Category::get();        
-        $currentCategory = Category::where('id' , $categoryId)->get()-first();
+        $currentCategory = Category::where('id' , $categoryId)->first();
         $edit = true;
-        return view('admin\category\create', compact('categories' , 'edit' , 'currentCateggory'));
+        $actionUrl = route('admin.category.edit.save');
+
+        return view('admin\category\create', compact('categories' , 'edit' , 'currentCategory' , 'actionUrl'));
     }
 
     // Edit Save Category
@@ -70,6 +72,8 @@ class CategoryController extends Controller
 
         return redirect()->back()->with('message', 'Category Updated');   
     }
+
+    // Delete Category
 
     public function deleteCategory($categoryId)
     {

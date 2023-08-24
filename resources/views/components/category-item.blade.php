@@ -6,7 +6,7 @@
     <div class="d-flex">
         <li><p>{{$category->category_name}}</p></li>
         <a class="" style="margin-left: 5px;" href="{{route('admin.category.edit',$category_id = $category->id)}}">Edit</a>
-        <a style="margin-left: 5px;" href="">Delete</a>
+        <a style="margin-left: 5px;" href="{{route('admin.category.delete' , $category_id = $category->id)}}">Delete</a>
    </div>
 
     @foreach($category->children as $child)

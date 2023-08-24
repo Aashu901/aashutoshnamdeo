@@ -5,10 +5,9 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">Dashboard [ Categories ]</div>
                 <div class="card-body">
-                    You are Admin.
-                    <h3>Categories</h3>
+                 
                     <ul>
                     @foreach ($categories as $category)
 

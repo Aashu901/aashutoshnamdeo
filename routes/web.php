@@ -34,4 +34,12 @@ Route::group(['middleware' => ['auth', 'is_admin'] , 'prefix' => 'admin'], funct
     // Category Edit
     Route::get('edit/category/{categoryId}', [App\Http\Controllers\Admin\CategoryController::class, 'editCategory'])->name('admin.category.edit');
     Route::post('edit/category/save', [App\Http\Controllers\Admin\CategoryController::class, 'editCategorySave'])->name('admin.category.edit.save');
+
+    // Delete Category
+    Route::get('delete/category/{categoryId}', [App\Http\Controllers\Admin\CategoryController::class, 'deleteCategory'])->name('admin.category.delete');
+
+    // List User 
+    Route::get('user/list', [App\Http\Controllers\Admin\UsersController::class, 'listUser'])->name('admin.user.list');
+
+
 });

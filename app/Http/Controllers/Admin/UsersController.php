@@ -11,7 +11,7 @@ class UsersController extends Controller
     public function listUser()
     {
         $users = User::where('is_admin', '0')->get();
-        return view('admin\user\list' compact('users'));
+        return view('admin\user\list' , compact('users'));
 
     }
 }

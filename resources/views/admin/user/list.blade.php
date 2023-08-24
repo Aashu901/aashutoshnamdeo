@@ -12,6 +12,7 @@
                             <tr>
                                 <th scope="col">User ID</th>
                                 <th scope="col">Name</th>
+                                <th scope="col">Crated On</th>
                                 
                             </tr>
                         </thead>
@@ -20,6 +21,8 @@
                             <tr>
                                 <th scope="row">{{$user->id}}</th>
                                 <td>{{$user->name}}</td>
+                                <td>{{$user->created_at}}</td>
+                                
                                 
                             </tr>
                             @endforeach
